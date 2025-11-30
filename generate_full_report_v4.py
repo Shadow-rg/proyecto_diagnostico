@@ -6,16 +6,18 @@ from datetime import datetime, timezone
 # METADATOS DE CULTIVOS (icono, color, nombre)
 # -----------------------------
 CROP_META = {
-    "maize":    {"nombre": "Maíz",     "icon": "🌽", "color": "#F4B400"},
-    "tomato":   {"nombre": "Tomate",   "icon": "🍅", "color": "#DB4437"},
-    "rice":     {"nombre": "Arroz",    "icon": "🌾", "color": "#C2B280"},
-    "wheat":    {"nombre": "Trigo",    "icon": "🌾", "color": "#DDB967"},
-    "soybean":  {"nombre": "Soya",     "icon": "🫘", "color": "#9E9D24"},
-    "chilli":   {"nombre": "Chile",    "icon": "🌶️", "color": "#C62828"},
-    "banana":   {"nombre": "Banano",   "icon": "🍌", "color": "#FDD835"},
-    "coconut":  {"nombre": "Coco",     "icon": "🥥", "color": "#8D6E63"},
-    "papaya":   {"nombre": "Papaya",   "icon": "🥭", "color": "#FFB74D"},
+    "maize":    {"nombre": "Maíz", "icon": "🌽", "color": "#F4B400"},
+    "tomato":   {"nombre": "Tomate", "icon": "🍅", "color": "#DB4437"},
+    "rice":     {"nombre": "Arroz", "icon": "🌾", "color": "#C2B280"},
+    "wheat":    {"nombre": "Trigo", "icon": "🌾", "color": "#DDB967"},
+    "soyabean": {"nombre": "Soya", "icon": "🫘", "color": "#9E9D24"},  # corregido
+    "chilli":   {"nombre": "Chile", "icon": "🌶️", "color": "#C62828"},
+    "banana":   {"nombre": "Banano", "icon": "🍌", "color": "#FDD835"},
+    "coconut":  {"nombre": "Coco", "icon": "🥥", "color": "#8D6E63"},
+    "papaya":   {"nombre": "Papaya", "icon": "🥭", "color": "#FFB74D"},
+    "no_cultivo": {"nombre": "Sin cultivo", "icon": "❓", "color": "#9E9E9E"}  # añadido
 }
+
 
 # -----------------------------
 # Recomendaciones por cultivo (breve + acciones)
@@ -53,7 +55,7 @@ CROP_RECOMMENDATIONS = {
             "Ajustar fertilización en etapas de macollado/espigado."
         ]
     },
-    "soybean": {
+    "soyabean": {
         "breve": "Control de chupadores; rotación y balance nutricional.",
         "acciones": [
             "Aplicar control suave contra pulgones (jabón potásico).",
