@@ -1,11 +1,14 @@
 # Imagen base ligera con Python
 FROM python:3.10-slim
 
-# Instala dependencias del sistema necesarias para Pillow y TFLite
+# Instala dependencias necesarias para numpy, pillow y tflite
 RUN apt-get update && apt-get install -y \
     build-essential \
     libjpeg-dev \
     zlib1g-dev \
+    libatlas-base-dev \
+    libblas-dev \
+    liblapack-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Carpeta de trabajo
