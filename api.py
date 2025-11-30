@@ -5,13 +5,12 @@ import numpy as np
 from PIL import Image
 import base64
 import io
-import json
-import tflite_runtime.interpreter as tflite
+import tensorflow as tf  # Usamos TensorFlow en lugar de tflite_runtime
 
 app = FastAPI()
 
-# Cargar modelo TFLite
-interpreter = tflite.Interpreter(model_path="modelo_agro.tflite")
+# Cargar modelo TFLite con TensorFlow
+interpreter = tf.lite.Interpreter(model_path="modelo_agro.tflite")
 interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
